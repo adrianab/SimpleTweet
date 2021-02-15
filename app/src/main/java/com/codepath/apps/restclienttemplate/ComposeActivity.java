@@ -52,11 +52,23 @@ public class ComposeActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                int tweetLength = etCompose.getText().toString().length();
+                int charsCount = tweetLength;
+                String charsLeftMessage = Integer.toString(charsCount) + "/280";
+                tvCount.setText(charsLeftMessage);
+                if (charsCount > 280)
+                {
+                    tvCount.setTextColor(Color.RED);
+                }
+                else
+                {
+                    tvCount.setTextColor(Color.DKGRAY);
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
+                /*
                 int character = etCompose.length();
 
                 String convert = String.valueOf(character);
@@ -68,6 +80,7 @@ public class ComposeActivity extends AppCompatActivity {
                     tvCount.setTextColor(Color.RED);
                     tvCount.setText("Count: " + convert + "/280");
                 }
+                */
             }
         });
 
