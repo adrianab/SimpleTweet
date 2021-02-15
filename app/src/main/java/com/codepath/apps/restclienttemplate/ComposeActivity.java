@@ -68,19 +68,7 @@ public class ComposeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                /*
-                int character = etCompose.length();
 
-                String convert = String.valueOf(character);
-
-                tvCount.setText("Count: "  + convert + "/280");
-
-                while (character > 280)
-                {
-                    tvCount.setTextColor(Color.RED);
-                    tvCount.setText("Count: " + convert + "/280");
-                }
-                */
             }
         });
 
